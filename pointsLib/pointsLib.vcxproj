@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AFFC40FA-FDF2-421E-B28E-3DE7F5A9A8F7}</ProjectGuid>
+    <RootNamespace>pointsLib</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\include;C:\Users\Rinat\Downloads\dlib-master\dlib-master;C:\Users\Rinat\Documents\Visual Studio 2015\Projects\dlibv2\dlibv2\libjpeg;C:\Program Files\Java\jdk1.8.0_111\include\win32;$(OPENCV_DIR)\..\..\include;C:\Program Files\Java\jdk1.8.0_111\include\win32\bridge;C:\Program Files\Java\jdk1.8.0_111\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>DLIB_JPEG_SUPPORT;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\bin;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\lib;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\bin;$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;libfacedetect.lib;libfacedetect-x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\include;C:\Users\Rinat\Downloads\dlib-master\dlib-master;C:\Users\Rinat\Documents\Visual Studio 2015\Projects\dlibv2\dlibv2\libjpeg;C:\Program Files\Java\jdk1.8.0_111\include\win32;$(OPENCV_DIR)\..\..\include;C:\Program Files\Java\jdk1.8.0_111\include\win32\bridge;C:\Program Files\Java\jdk1.8.0_111\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>DLIB_JPEG_SUPPORT;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\bin;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\lib;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\bin;$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;libfacedetect.lib;libfacedetect-x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\include;C:\Users\Rinat\Downloads\dlib-master\dlib-master;C:\Users\Rinat\Documents\Visual Studio 2015\Projects\dlibv2\dlibv2\libjpeg;C:\Program Files\Java\jdk1.8.0_111\include\win32;$(OPENCV_DIR)\..\..\include;C:\Program Files\Java\jdk1.8.0_111\include\win32\bridge;C:\Program Files\Java\jdk1.8.0_111\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>DLIB_JPEG_SUPPORT;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\bin;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\lib;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\bin;$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;libfacedetect.lib;libfacedetect-x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\include;C:\Users\Rinat\Downloads\dlib-master\dlib-master;C:\Users\Rinat\Documents\Visual Studio 2015\Projects\dlibv2\dlibv2\libjpeg;C:\Program Files\Java\jdk1.8.0_111\include\win32;$(OPENCV_DIR)\..\..\include;C:\Program Files\Java\jdk1.8.0_111\include\win32\bridge;C:\Program Files\Java\jdk1.8.0_111\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>DLIB_JPEG_SUPPORT;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\bin;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\lib;C:\Users\Rinat\Downloads\libfacedetection-master\libfacedetection-master\bin;$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;libfacedetect.lib;libfacedetect-x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jchuff.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jconfig.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jdct.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jdhuff.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jerror.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jinclude.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jmemsys.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jmorecfg.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jpegint.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jpeglib.h" />
+    <ClInclude Include="..\..\dlibv2\dlibv2\libjpeg\jversion.h" />
+    <ClInclude Include="faceSwap_OurNativeLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\dlib-master\dlib-master\dlib\all\source.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcapimin.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcapistd.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jccoefct.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jccolor.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcdctmgr.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jchuff.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcinit.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcmainct.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcmarker.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcmaster.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcomapi.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcparam.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcphuff.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcprepct.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jcsample.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdapimin.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdapistd.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdatadst.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdatasrc.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdcoefct.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdcolor.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jddctmgr.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdhuff.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdinput.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdmainct.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdmarker.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdmaster.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdmerge.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdphuff.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdpostct.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jdsample.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jerror.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jfdctflt.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jfdctfst.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jfdctint.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jidctflt.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jidctfst.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jidctint.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jidctred.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jmemmgr.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jmemnobs.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jquant1.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jquant2.cpp" />
+    <ClCompile Include="..\..\dlibv2\dlibv2\libjpeg\jutils.cpp" />
+    <ClCompile Include="faceSwap_OurNativeLib.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
